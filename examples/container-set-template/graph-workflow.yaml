@@ -17,12 +17,16 @@ spec:
         containers:
           - name: a
             image: argoproj/argosay:v2
+            command: ["cowsay"]
           - name: b
             image: argoproj/argosay:v2
+            command: ["cowsay"]
             dependencies: ["a"]
           - name: c
             image: argoproj/argosay:v2
+            command: ["cowsay"]
             dependencies: ["a"]
           - name: d
             image: argoproj/argosay:v2
+            command: ["cowsay"]
             dependencies: ["b", "c"]
